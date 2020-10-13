@@ -1,0 +1,47 @@
+####Step 1: Create an IAM Policy####
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "ec2:DescribeInstances",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+
+###Step 2: Create an IAM Role
+
+###Step 3: Create a Lambda Function
+Select appropriate runtime and IAM role
+
+
+###Step 4: Create CloudWatch Event rules
+
+#To stop instance, copy and paste the following JSON test under Configure input > Constant
+
+{
+   "action":"stop"
+}
+
+
+#To stop instance, copy and paste the following JSON test under Configure input > Constant
+
+{
+   "action":"sart"
+}
+
+
+
+
